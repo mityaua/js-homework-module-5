@@ -1,4 +1,21 @@
 // Write code under this line
+class Storage {
+  constructor(items) {
+    this.items = items;
+  }
+}
+
+Storage.prototype.getItems = function (items) {
+  return this.items;
+};
+
+Storage.prototype.addItem = function (items) {
+  return this.items;
+};
+
+Storage.prototype.removeItem = function (items) {
+  return this.items;
+};
 
 console.log(typeof Storage);
 // 'function'
@@ -25,8 +42,8 @@ console.log(storage.getItems());
   'Дроид'
 ] */
 
-// storage.removeItem('Пролонгер');
-// console.log(storage.getItems());
+storage.removeItem('Пролонгер');
+console.log(storage.getItems());
 /* [
   'Нанитоиды',
   'Железные жупи',
