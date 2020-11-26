@@ -1,3 +1,13 @@
+// 1. Создаем для класса Car статический метод getSpecs, который принимает параметром car и возвращает шаблонную строку согласно условию;
+// 2. Принимаем для конструктора параметр в виде обьекта от new Car; 
+// 3. В свойства конструктора вписываем все свойства согласно условию и их начальные значения;
+// 4. Создаем геттер и сеттер для свойства price согласно условия;
+// 5. Для метода turnOn записываем в свойство значение по условию;
+// 6. Для метода turnOff записываем в свойство значения по условию. А также значение скорости по условию;
+// 7. Для метода accelerate вписываем условие (если-тогда, иначе) по задаче;
+// 8. Для метода decelerate вписываем условие (если-тогда, иначе) по задаче;
+// 9. Для метода drive вписываем условие (если-тогда) по задаче;
+
 class Car {
   // Write code under this line
   static getSpecs(car) {
@@ -30,13 +40,13 @@ class Car {
   }
 
   accelerate(value) {
-    if (value + this.speed > this.maxSpeed) {
-      this.speed = this.maxSpeed;
-    } else this.speed += value;
+    if (this.speed + value < this.maxSpeed) {
+      this.speed += value;
+    } else this.speed = this.maxSpeed;
   }
 
   decelerate(value) {
-    if (this.speed + value > 0) {
+    if (this.speed - value > 0) {
       this.speed -= value;
     } else this.speed = 0;
   }
