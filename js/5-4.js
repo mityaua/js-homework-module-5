@@ -28,6 +28,7 @@ class StringBuilder {
 
   pad(str) {
     return this.append(str) + this.prepend(str);
+    // или this.append(str);this.prepend(str);
   }
 }
 
