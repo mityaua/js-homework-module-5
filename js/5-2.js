@@ -1,5 +1,5 @@
 // 1. Создаем класс User используя аналог функции-конструктора, куда принимаем три параметра с именем, возрастом и количеством подписчиков;
-// 2. Добавляем в класс User метод - функцию getInfo, которая принимает параметры имени, возраста, к-ва подписчиков и возвращает шаблонную строку по условию, используя this;
+// 2. Добавляем в класс User метод - функцию getInfo, которая возвращает шаблонную строку по условию, используя this;
 
 // Write code under this line
 class User {
@@ -9,7 +9,7 @@ class User {
     this.followers = followers;
   }
 
-  getInfo(name, age, followers) {
+  getInfo() {
     return `User ${this.name} is ${this.age} years old and has ${this.followers} followers`;
   }
 }
